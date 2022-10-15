@@ -1,0 +1,75 @@
+.card {
+  box-sizing: border-box;
+  padding: 32px;
+  background-color: $white;
+  border-radius: 16px;
+  height: 264px;
+
+  @include onTablet {
+    width: 263px;
+  }
+
+  @include onDesktop {
+    width: 214px;
+  }
+
+  &__title {
+    display: inline-block;
+    padding: 2px 10px 0;
+    margin-bottom: 24px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $blue;
+    background-color: $light-gray;
+    border-radius: 23px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 1.5;
+    color: $grey;
+  }
+
+  &__link {
+    display: block;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    text-decoration: none;
+    color: $dark-blue;
+    position: relative;
+    cursor: pointer;
+
+    @include onDesktop {
+      text-align: end;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: $blue;
+      background-image: url('../img/card-arrow.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 50%;
+      left: 0;
+      top: -50%;
+      transition: scale, 0.5s;
+      
+    }
+
+    &:hover::before {
+      transform: scale(115%);
+    }
+  }
+}

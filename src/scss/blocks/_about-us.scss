@@ -1,0 +1,25 @@
+.about-us {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include onTablet {
+    padding-top: 148px;
+    padding-bottom: 148px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__text {
+    margin: 24px auto 0;
+
+    @include onTablet {
+      margin-top: 16px;
+    }
+
+    @include onDesktop {
+      width: 716px;
+    }
+  }
+}

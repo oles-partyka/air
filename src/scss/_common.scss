@@ -1,0 +1,63 @@
+.page {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  &__body {
+    background-color: $light-gray;
+  }
+}
+
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1024px;
+
+  @include onTablet {
+    padding: 0 40px;
+  }
+
+  @include onDesktop {
+    padding: 0 50px;
+  }
+}
+
+.logo {
+  padding-bottom: 8px;
+  &__img {
+    width: 44px;
+    height: 25px;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 22px;
+  color: $white;
+  background-color: $blue;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 0;
+  width: 100%;
+  cursor: pointer;
+  transition: scale, 0.5s;
+
+  &:hover {
+    filter: brightness(120%);
+  }
+
+  &:active {
+    filter: brightness(90%);
+    transform: scale(95%);
+  }
+
+  @include onTablet {
+    width: 264px;
+  }
+}

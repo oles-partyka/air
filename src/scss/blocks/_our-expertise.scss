@@ -1,0 +1,93 @@
+.our-expertise {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  background-color: $white;
+  border-radius: 30px;
+
+  @include onTablet {
+    padding-top: 128px;
+    padding-bottom: 128px;
+  }
+
+  @include onDesktop {
+    padding-top: 134px;
+    padding-bottom: 134px;
+  }
+
+  &__title {
+    margin-bottom: 52px;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 1.2;
+    text-align: center;
+    color: $dark-blue;
+
+    @include onTablet {
+      margin-bottom: 64px;
+      line-height: 1.5;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+
+    @include onTablet {
+      gap: 72px;
+    }
+
+    @include onDesktop {
+      flex-direction: row;
+      gap: 137px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @include onTablet {
+      width: 362px;
+    }
+
+    @include onDesktop {
+      width: 214px;
+    }
+  }
+
+  &__img {
+    width: 166px;
+    height: 166px;
+    border-radius: 16px;
+    margin-bottom: 32px;
+    transition: scale, 0.5s;
+
+    &:hover {
+      transform: scale(110%);
+    }
+
+    @include onDesktop {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__card-title {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $dark-blue;
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}

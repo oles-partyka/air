@@ -1,0 +1,43 @@
+.burger-wrapper {
+  @include onDesktop {
+    display: none;
+  }
+
+  & input {
+    display: none;
+
+    &:checked ~ .burger .burger__line:first-child {
+      transform: translate(0, 2px) rotate(45deg);
+    }
+
+    &:checked ~ .burger .burger__line:last-child {
+      transform: translate(0, -4px) rotate(-45deg);
+    }
+
+    &:checked ~ .mobile-nav {
+      display: flex;
+      pointer-events: initial;
+      appearance: initial;
+      z-index: initial;
+      top: 60px;
+      left: 20px;
+    }
+  }
+}
+
+.burger {
+  width: 18px;
+  height: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  &__line {
+    height: 2px;
+    width: 100%;
+    background-color: $white;
+    border-radius: 2px;
+    transition: transform 0.4s, opacity 0.4s;
+  }
+}

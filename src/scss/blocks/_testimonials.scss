@@ -1,0 +1,21 @@
+.testimonials {
+  padding-bottom: 120px;
+
+  @include onTablet {
+    padding-bottom: 148px;
+  }
+
+  &__title {
+    margin-top: 16px;
+    margin-bottom: 48px;
+
+    @include onTablet {
+      width: 200px;
+      margin-bottom: 56px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 85px;
+    }
+  }
+}
